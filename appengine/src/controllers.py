@@ -28,7 +28,7 @@ def index(request: Request):
         SELECT
             *
         FROM 
-            `COVID19.MHLW_JAPAN`
+            `COVID19.test`
         ORDER BY 
             DATE
         """
