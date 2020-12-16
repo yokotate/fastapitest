@@ -1,10 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
-<br>
-<h1>Hello World!</h1>
 
 <canvas id="chart"></canvas>
-
 <script>
 window.chartColors = {
     red: 'rgb(255, 99, 132)',
@@ -24,42 +21,78 @@ var chartDatas = {
                 "{{label}}",
             {% endfor %}
         ],
-        datasets: [//{
-            label: 'PCR検査陽性者人数',
+        datasets: [{
+            label: 'AFRO',
             type: 'line',
             backgroundColor: window.chartColors.red,
             borderColor: window.chartColors.red,
             yAxisID: 'y-axis-1',
             data: [
-                {% for data in datas[0] %}
+                {% for data in datas_AFRO[1] %}
                     {{data}},
                 {% endfor %}
             ],
             fill: false,
         }, {
-            label: 'PCR検査陽性者合計',
-            type: 'bar',
-            fill: false,
-            backgroundColor: window.chartColors.green,
-            borderColor: window.chartColors.green,
+            label: 'AMRO',
+            type: 'line',
+            backgroundColor: window.chartColors.red,
+            borderColor: window.chartColors.red,
             yAxisID: 'y-axis-1',
             data: [
-                {% for data in datas[1] %}
+                {% for data in datas_AMRO[1] %}
                     {{data}},
                 {% endfor %}
             ],
+            fill: false,
+        },{
+            label: 'WPRO',
+            type: 'line',
+            backgroundColor: window.chartColors.red,
+            borderColor: window.chartColors.red,
+            yAxisID: 'y-axis-1',
+            data: [
+                {% for data in datas_WPRO[1] %}
+                    {{data}},
+                {% endfor %}
+            ],
+            fill: false,
         }, {
-            label: '死亡者数合計',
-            type: 'bar',
-            fill: false,
-            backgroundColor: window.chartColors.grey,
-            borderColor: window.chartColors.grey,
+            label: 'EMRO',
+            type: 'line',
+            backgroundColor: window.chartColors.red,
+            borderColor: window.chartColors.red,
             yAxisID: 'y-axis-1',
             data: [
-                {% for data in datas[2] %}
+                {% for data in datas_EMRO[1] %}
                     {{data}},
                 {% endfor %}
             ],
+            fill: false,
+        }, {
+            label: 'SEARO',
+            type: 'line',
+            backgroundColor: window.chartColors.red,
+            borderColor: window.chartColors.red,
+            yAxisID: 'y-axis-1',
+            data: [
+                {% for data in datas_SEARO[1] %}
+                    {{data}},
+                {% endfor %}
+            ],
+            fill: false,
+        }, {
+            label: 'EURO',
+            type: 'line',
+            backgroundColor: window.chartColors.red,
+            borderColor: window.chartColors.red,
+            yAxisID: 'y-axis-1',
+            data: [
+                {% for data in datas_EURO[1] %}
+                    {{data}},
+                {% endfor %}
+            ],
+            fill: false,
         }]
     },
     options: {
