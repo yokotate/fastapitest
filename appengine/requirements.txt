@@ -12,3 +12,4 @@ style==1.1.0
 typing-extensions==3.7.4.3
 update==0.0.1
 uvicorn==0.13.0
+google-cloud-bigquery==2.5.0
