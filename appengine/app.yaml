@@ -1,3 +1,5 @@
 service: my-appengine
 
+entrypoint: uvicorn --port $PORT src.urls:app
+
 runtime: python37

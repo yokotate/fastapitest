@@ -21,4 +21,5 @@ templates = Jinja2Templates(directory="templates")
 jinja_env = templates.env  # Jinja2.Environment : filterやglobalの設定用
 
 def index(request: Request):
-    return templates.TemplateResponse('./contents/index.html', {'request': request})
+    return templates.TemplateResponse('index.html', {'request': request})
+
