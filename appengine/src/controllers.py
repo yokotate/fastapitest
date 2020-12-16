@@ -39,7 +39,7 @@ def index(request: Request):
     df = query_job.to_dataframe()
     
     labels = df["date"]
-    datas = [df["pcr_positive_daily"], df["pcr_tested_daily"], df["cases_total"], df["death_total"]]
+    datas = [df["pcr_positive_daily"], df["pcr_positive_total"], df["death_total"]]
 
 
     return templates.TemplateResponse('index.html', {'request': request, 'datas':datas, 'labels':labels})

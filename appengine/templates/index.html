@@ -24,7 +24,7 @@ var chartDatas = {
                 "{{label}}",
             {% endfor %}
         ],
-        datasets: [{
+        datasets: [//{
             label: 'PCR検査陽性者人数',
             type: 'line',
             backgroundColor: window.chartColors.red,
@@ -88,6 +88,14 @@ var chartDatas = {
                 display: true,
                 position: 'left',
                 id: 'y-axis-1',
+                scaleLabel: {
+                    display: true,
+                    labelString: '人数'
+                }
+            },{
+                display: true,
+                position: 'right',
+                id: 'y-axis-2',
                 scaleLabel: {
                     display: true,
                     labelString: '人数'
