@@ -3,3 +3,4 @@ pandas
 pyarrow
 fastapi
 jinja2
+uvicorn
